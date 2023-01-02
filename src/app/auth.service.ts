@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
-import { retry } from 'rxjs';
 
 @Injectable()
 export class AuthService {
 
-    // private login="https://run.mocky.io/v3/d8ebc471-7390-4b0f-aced-534478cbd22b";
+    private login="http://localhost:3000/posts";
 
-    // constructor(private http:HttpClient) { }
+    constructor(private http:HttpClient) { }
 
-    // getDetails(){
-    //     return this.http.get(this.login);
-    // }
+    getDetails(){
+        return this.http.get(this.login);
+    }
+    signIn(username:string,password:string){
+        return this.http.post(this.login+'signin',{
+            username,password
+        })
+    }
 }

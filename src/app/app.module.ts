@@ -6,19 +6,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './auth.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [					
     AppComponent,
       LoginComponent,
       AboutComponent,
-      AdminComponent
+      AdminComponent,
+      HeaderComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth.service';
+import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,17 +9,15 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  detail:any;
+  values: any;
+  // answer:Array<Data>=[];
 
-  constructor(private auth:AuthService) { }
+  constructor(private authService:AuthService) { }
 
   ngOnInit() {
+    this.detail=this.authService.getDetails().subscribe(data=>{this.detail=data;});
   }
-
-  // loginUser(){
-  //   this.auth.loginUser(this.loginUser).subsribe(
-  //     (res: any)=>console.log(res),
-  //     (err: any)=>console.log(err)
-  //   )
-  // }
+  
 
 }

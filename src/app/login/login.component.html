@@ -15,5 +15,19 @@
     <input type="password" required placeholder="Enter your Password"><br><br>
     <button type="submit">SUBMIT</button>
   </div>
+  {{detail|json}}
+
+  
+  <tr *ngFor="let value of detail">
+    <td>{{value.id}}</td>
+    <td>{{value.title}}</td>
+  </tr>
+
+
+
+  <!-- <li *ngFor="let values of detail"></li>
+  <ul>{{values}}</ul> -->
+
+  <!-- <li>{{detail|json}}</li> -->
 </body>
 </html>
