@@ -1,31 +1,22 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
   "details": [
     {
       "id": 1,
       "name": "amar",
-      "password": "Amarnath@123"
+      "password": "Amarnath@123",
+      "role":"Developer"
     },
     {
       "id": 2,
       "name": "mugesh",
-      "password": "Mugesh@123"
-    }
-  ],
-  "comments": [
+      "password": "Mugesh@123",
+      "role":"Manager"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id":3,
+      "name":"srikarthi",
+      "password":"Karthik$111",
+      "role":"Sr.Developer"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

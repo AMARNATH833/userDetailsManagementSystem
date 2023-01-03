@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http'
 @Injectable()
 export class AuthService {
 
-    private login="http://localhost:3000/posts";
+    private login="http://localhost:3000/details";
 
     constructor(private http:HttpClient) { }
 

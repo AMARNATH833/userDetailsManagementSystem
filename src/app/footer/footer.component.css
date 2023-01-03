@@ -1,0 +1,18 @@
+footer{
+    text-align: center;
+    padding: 3px;
+    background-color: darksalmon;
+    color: white;
+    padding-bottom: 21px;
+    position:sticky;
+    bottom: 0;
+    width: 96rem;
+    left: 0;
+    right: 0;
+}
+a[href^='mailto']::before {
+    content: '📧 ';
+}
+a[href^='tel']::before {
+    content: '📞 ';
+}

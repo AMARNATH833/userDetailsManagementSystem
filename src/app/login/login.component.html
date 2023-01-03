@@ -8,26 +8,23 @@
 </head>
 <body>
   <h1>Login Page</h1>
-  <div class="login">
-    <label>Username :</label><br><br>
-    <input type="text" required placeholder="Enter your Username"><br><br>
-    <label>PASSWORD :</label><br><br>
-    <input type="password" required placeholder="Enter your Password"><br><br>
+
+  <form [formGroup]="loginForm" (ngSubmit)="Login()">
+
+    <div id="username" >
+      <label>Enter your username:  </label>
+      <input formControlName="name" type="text" id="userNameLogin" required="required" placeholder="Enter your username">
+      <div *ngIf="!loginForm.get('name')?.valid && loginForm.get('name')?.touched">Enter atleast only 8characters for name:</div>
+    </div>
+
+    <div id="password" >
+      <label>Enter your password:   </label>
+      <input formControlName="password" type="password" id="passwordLogin" required="required" placeholder="Enter your Password">
+    </div>
+
     <button type="submit">SUBMIT</button>
-  </div>
-  {{detail|json}}
 
-  
-  <tr *ngFor="let value of detail">
-    <td>{{value.id}}</td>
-    <td>{{value.title}}</td>
-  </tr>
+</form>
 
-
-
-  <!-- <li *ngFor="let values of detail"></li>
-  <ul>{{values}}</ul> -->
-
-  <!-- <li>{{detail|json}}</li> -->
 </body>
 </html>

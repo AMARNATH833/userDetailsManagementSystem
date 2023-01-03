@@ -2,9 +2,10 @@
     text-align: center;
     color: antiquewhite;
     background-color: black;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 30px;
+    position: sticky;
+    top: 0;
+    width: 97rem;
+    left: 0;
 }
 .image{
     width: 1505px;
