@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthService } from './auth.service';
 import { HeaderComponent } from './header/header.component';
 import { ErrorPageComponent } from './errorPage/errorPage.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DashBoardComponent } from './dashBoard/dashBoard.component';
 import { SampleComponent } from './sample/sample.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [										
@@ -35,7 +35,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

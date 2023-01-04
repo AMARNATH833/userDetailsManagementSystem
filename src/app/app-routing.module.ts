@@ -6,15 +6,16 @@ import { DashBoardComponent } from './dashBoard/dashBoard.component';
 import { ErrorPageComponent } from './errorPage/errorPage.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { SampleComponent } from './sample/sample.component';
 
 const routes: Routes = [
   {path:'home',title:'Home',component:HomeComponent},
   {path:'login',title:'Login',component:LoginComponent},
   {path:'about',title:'About',component:AboutComponent},
   {path:'dashboard',title:'DashBoard',component:DashBoardComponent},
+  {path:'sample',title:'SAMPLE',component:SampleComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'**',title:'PAGENOTFOUND',component:ErrorPageComponent},
-  
+  {path:'**',title:'PAGENOTFOUND',component:ErrorPageComponent}
 ];
 
 @NgModule({

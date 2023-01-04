@@ -13,8 +13,8 @@
 
     <div id="username" >
       <label>Enter your username:  </label>
-      <input formControlName="name" type="text" id="userNameLogin" required="required" placeholder="Enter your username">
-      <div *ngIf="!loginForm.get('name')?.valid && loginForm.get('name')?.touched">Enter atleast only 8characters for name:</div>
+      <input formControlName="name" type="text" id="userNameLogin" required="required" placeholder="Enter your username" autocomplete="off">
+      <div id="error" *ngIf="!loginForm.get('name')?.valid && loginForm.get('name')?.touched">Enter atleast 8 characters for Username </div>
     </div>
 
     <div id="password" >

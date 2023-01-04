@@ -2,9 +2,9 @@
     text-align: center;
     color: antiquewhite;
     background-color: black;
-    position: sticky;
+    position: fixed;
     top: 0;
-    width: 97rem;
+    width: 95rem;
     left: 0;
 }
 .image{

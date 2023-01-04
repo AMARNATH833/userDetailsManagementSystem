@@ -4,7 +4,7 @@ footer{
     background-color: darksalmon;
     color: white;
     padding-bottom: 21px;
-    position:sticky;
+    position:fixed;
     bottom: 0;
     width: 96rem;
     left: 0;

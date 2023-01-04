@@ -1,0 +1,22 @@
+<h1>Sample Works ADMIN VIEW :) !</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let number of member">
+            <td>{{number.id}}</td>
+            <td>{{number.name}}</td>
+            <td>{{number.password}}</td>
+            <td>{{number.role}}</td>
+        </tr>
+    </tbody>
+</table>
+<button (ngSubmit)="update()">Update</button>
+<!-- <button (ngSubmit)="remove()">Delete</button> -->

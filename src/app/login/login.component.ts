@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AuthService } from '../auth.service';
 import { Data, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { name,password } from '../verify.validation';
@@ -14,6 +13,7 @@ export class LoginComponent implements OnInit {
 [x: string]: any;
   
   public loginForm:FormGroup|any;
+  
   constructor(private fb:FormBuilder,private http:HttpClient,private router:Router) { }
 
   ngOnInit() {
@@ -24,7 +24,13 @@ export class LoginComponent implements OnInit {
   }
   
   Login(){
-    this.http.get<any>("http://localhost:3000/details")
+    if(this.loginForm.value.name == "admin" && this.loginForm.value.password == 'Admin@123'){
+      alert("login Sucessfull");
+      this.loginForm.reset();
+      this.router.navigate(['sample']);
+    }
+    else{
+      this.http.get<any>("http://localhost:3000/details")
     .subscribe(res=>{
       const user=res.find((data:any)=>{
         return data.name === this.loginForm.value.name && data.password === this.loginForm.value.password 
@@ -39,6 +45,7 @@ export class LoginComponent implements OnInit {
     },err=>{
       alert("Something went wrong");
     })
+    }
+    
   }
-
 }
