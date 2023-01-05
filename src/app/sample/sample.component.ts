@@ -9,6 +9,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./sample.component.css']
 })
 export class SampleComponent{
+
   public url='http://localhost:3000/details';
   member:any;
   constructor(private userservice:UserService,private http:HttpClient) {
@@ -17,10 +18,4 @@ export class SampleComponent{
 
   ngOnInit(){}
 
-  update(){
-
-  }
-  remove(id:Number){
-    this.http.delete(`${this.url}/delete/${id}`)
-  }
 }

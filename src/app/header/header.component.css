@@ -2,7 +2,7 @@
     text-align: center;
     color: antiquewhite;
     background-color: black;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 95rem;
     left: 0;

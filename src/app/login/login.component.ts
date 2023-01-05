@@ -15,19 +15,18 @@ export class LoginComponent implements OnInit {
   public loginForm:FormGroup|any;
   
   constructor(private fb:FormBuilder,private http:HttpClient,private router:Router) { }
-
   ngOnInit() {
     this.loginForm=this.fb.group({
       name:['',name],
       password:['',password]
     })
   }
-  
+ 
   Login(){
     if(this.loginForm.value.name == "admin" && this.loginForm.value.password == 'Admin@123'){
       alert("login Sucessfull");
       this.loginForm.reset();
-      this.router.navigate(['sample']);
+      this.router.navigate(['admin']);
     }
     else{
       this.http.get<any>("http://localhost:3000/details")
