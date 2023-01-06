@@ -1,18 +1,6 @@
 {
   "details": [
     {
-      "id": "5",
-      "name": "Sandhosh",
-      "password": "aSanKs@111",
-      "role": "Developer"
-    },
-    {
-      "id": "6",
-      "name": "SandhoshKumar",
-      "password": "aSanKumar@111",
-      "role": "Developer"
-    },
-    {
       "id": "7",
       "name": "SandhoshKumar",
       "password": "aSanKumar@111",
@@ -28,7 +16,8 @@
   "admin": [
     {
       "username": "AdminLogin",
-      "password": "Admin@$1234"
+      "password": "Admin@$1234",
+      "role": "admin"
     }
   ]
 }

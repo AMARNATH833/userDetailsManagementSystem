@@ -7,24 +7,27 @@
   <title>Login Page:</title>
 </head>
 <body>
+
+<div id="loginForm"> 
   <h1>Login Page</h1>
 
   <form [formGroup]="loginForm" (ngSubmit)="Login()">
 
     <div id="username" >
-      <label>Enter your username:  </label>
+      <label>Enter your username:  </label><pre></pre>
       <input formControlName="name" type="text" id="userNameLogin" required="required" placeholder="Enter your username" autocomplete="off">
       <div id="error" *ngIf="!loginForm.get('name')?.valid && loginForm.get('name')?.touched">Enter atleast 8 characters for Username </div>
     </div>
-
+    <pre></pre>
     <div id="password" >
-      <label>Enter your password:   </label>
+      <label>Enter your password:   </label><br><br>
       <input formControlName="password" type="password" id="passwordLogin" required="required" placeholder="Enter your Password">
     </div>
-
+<pre></pre>
     <button type="submit">SUBMIT</button>
 
-</form>
+  </form>
+</div>
 
 </body>
 </html>

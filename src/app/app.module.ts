@@ -12,14 +12,14 @@ import { ErrorPageComponent } from './errorPage/errorPage.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashBoardComponent } from './dashBoard/dashBoard.component';
-import { SampleComponent } from './sample/sample.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from './user.service';
 import { UpdateComponent } from './update/update.component';
-import { AuthServiceService } from './auth-service.service';
+
+
 
 @NgModule({
-  declarations: [											
+  declarations: [													
     AppComponent,
       LoginComponent,
       AboutComponent,
@@ -29,7 +29,6 @@ import { AuthServiceService } from './auth-service.service';
       HomeComponent,
       FooterComponent,
       DashBoardComponent,
-      SampleComponent,
       UpdateComponent
    ],
   imports: [
@@ -39,7 +38,7 @@ import { AuthServiceService } from './auth-service.service';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [UserService,AuthServiceService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
