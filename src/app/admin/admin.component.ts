@@ -11,7 +11,7 @@ import {AuthService} from '../auth.service'
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
+  title="admin";
   users:Users[]=[];
   user: any;
   constructor(private userservice:UserService,private http:HttpClient,private router:Router,private auth:AuthService) {}

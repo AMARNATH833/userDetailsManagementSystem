@@ -18,9 +18,8 @@ export function name(control:AbstractControl){
 export function password(control:AbstractControl){
 
     if(control &&(control.value!=null || control.value !==undefined)){
-        const regex=new RegExp('^((?!.*[s])(?=.*[A-Z])(?=.*d).{8,16})');
+        const regex=new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$');
     
-
     if(!regex.test(control.value)){
         return{
             isError:true

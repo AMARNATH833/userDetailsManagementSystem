@@ -1,6 +1,24 @@
 {
   "details": [
     {
+      "id": "4",
+      "name": "Srikarthi",
+      "password": "Sri@aspire121",
+      "role": "Developer"
+    },
+    {
+      "id": "5",
+      "name": "SivaSabari",
+      "password": "Sivasabari$111",
+      "role": "Developer"
+    },
+    {
+      "id": "6",
+      "name": "SandhaRUbhan",
+      "password": "Sandha@222",
+      "role": "Developer"
+    },
+    {
       "id": "7",
       "name": "SandhoshKumar",
       "password": "aSanKumar@111",

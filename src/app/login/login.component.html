@@ -9,19 +9,20 @@
 <body>
 
 <div id="loginForm"> 
-  <h1>Login Page</h1>
+  <h1>Login</h1>
 
   <form [formGroup]="loginForm" (ngSubmit)="Login()">
 
-    <div id="username" >
+    <div id="username">
       <label>Enter your username:  </label><pre></pre>
       <input formControlName="name" type="text" id="userNameLogin" required="required" placeholder="Enter your username" autocomplete="off">
       <div id="error" *ngIf="!loginForm.get('name')?.valid && loginForm.get('name')?.touched">Enter atleast 8 characters for Username </div>
     </div>
     <pre></pre>
-    <div id="password" >
+    <div id="password">
       <label>Enter your password:   </label><br><br>
       <input formControlName="password" type="password" id="passwordLogin" required="required" placeholder="Enter your Password">
+      <div id="error" *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">Enter atleast 8 characters for password </div>
     </div>
 <pre></pre>
     <button type="submit">SUBMIT</button>

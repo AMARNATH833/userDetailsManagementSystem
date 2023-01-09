@@ -8,10 +8,12 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-logout() {
+
+  // componentName="aboutUser"
+  logout() {
   this.auth.loggedIn=false;
   this.router.navigate(['home']);
-}
+  }
 
   constructor(private auth:AuthService,private router:Router) { }
 

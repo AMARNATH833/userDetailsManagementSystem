@@ -1,1 +1,20 @@
 <h1>DashBoard Works</h1>
+<button (click)="logout()">LOGOUT</button>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>password</th>
+            <th>role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let count of users">
+        <td>{{count.id}}</td>
+        <td>{{count.name}}</td>
+        <td>{{count.password}}</td>
+        <td>{{count.role}}</td>
+        </tr>
+    </tbody>
+</table>
