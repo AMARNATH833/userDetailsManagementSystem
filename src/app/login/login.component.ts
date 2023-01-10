@@ -4,7 +4,6 @@ import { Data, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { name,password } from '../verify.validation';
 import { AuthService } from '../auth.service';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +11,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-[x: string]: any;
+  [x: string]: any;
   isSubmitted:boolean=false;
   isValidUser:boolean=false;
   
@@ -28,10 +27,29 @@ export class LoginComponent implements OnInit {
  
   Login(){
     this.auth.login(this.loginForm.value.name , this.loginForm.value.password).subscribe(()=>{
-      if(this.loginForm.value.name == "Admin" && this.loginForm.value.password == "Adminlogg"){
+      if(this.loginForm.value.name == "AdminLogin" && this.loginForm.value.password == "Adminlogg@111"){
+        this.auth.loggedIn=true;
         this.router.navigate(['admin']);
-        // console.log(data)
       }
+
+        // console.log(data)
+        /*if(this.http.get<any>("http://localhost:3000/admin").subscribe(res=>{const user=res.find((data:any)=>{
+          return data.name === this.loginForm.value.name && data.password === this.loginForm.value.password});
+          if(user){
+            this.loginForm.rest();
+            this.auth.loggedIn=true;
+            this.router.navigate(['dashboard'])
+          }
+          else{
+            alert("Admin not found");
+          }
+      },err=>{
+        alert("Something went wrong");
+      })
+      ) */
+
+
+      
       else{
         // this.router.navigate(['about']);
           this.http.get<any>("http://localhost:3000/details")

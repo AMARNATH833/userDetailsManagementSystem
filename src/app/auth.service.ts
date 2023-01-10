@@ -20,10 +20,7 @@ export class AuthService {
       this.loggedIn=true;
       return of(true);
     }
-    else if(name === 'Amarnath' && password === 'AmarNath@121'){
-        this.loggedIn=true;
-        return of(true);
-    }
+    
 
 
     // else{

@@ -1,15 +1,27 @@
 {
   "details": [
     {
+      "id": "2",
+      "name": "MugeshKumarn",
+      "password": "Mugesh#112",
+      "role": "Developer"
+    },
+    {
+      "id": "3",
+      "name": "Srikarthik",
+      "password": "Sri@aspire@123",
+      "role": "Developer"
+    },
+    {
       "id": "4",
-      "name": "Srikarthi",
-      "password": "Sri@aspire121",
+      "name": "SabariSiva",
+      "password": "SSabari@11223",
       "role": "Developer"
     },
     {
       "id": "5",
-      "name": "SivaSabari",
-      "password": "Sivasabari$111",
+      "name": "MerlinzArul",
+      "password": "Merlin@aspire222",
       "role": "Developer"
     },
     {
@@ -28,6 +40,18 @@
       "id": "8",
       "name": "Srinivasan",
       "password": "sriNIvas@111",
+      "role": "Developer"
+    },
+    {
+      "id": "9",
+      "name": "SakthiVel",
+      "password": "Sakthi@@111",
+      "role": "Developer"
+    },
+    {
+      "id": "10",
+      "name": "DhanushM",
+      "password": "Dhanu$111",
       "role": "Developer"
     }
   ],
