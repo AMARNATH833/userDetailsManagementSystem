@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 export class AdminComponent implements OnInit {
   title="admin";
   users:Users[]=[];
-  user: any;
+  p:number=1;
 
   public linkURL="http://localhost:3000/details";
 
@@ -33,17 +33,10 @@ export class AdminComponent implements OnInit {
   }
   }
 
-  // update(user:User):Observable<User>{
-  //   const link=`${this.linkURL}/${user.id}`;
-  //   return this.http.put<User>(this.linkURL,user,this.httpOptions).pipe(
-  //     map(()=>user),
-  //     ca
-  //   )
-  // }  
-
-  UpdateUser(id: any){
+  update(id:Number){
     this.router.navigate(['/update',id]);
   }
+  
   logout(){
     // this.router.navigate(['/home']);
     alert("You logged out of the Site");

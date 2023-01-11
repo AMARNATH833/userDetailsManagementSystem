@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { DashBoardComponent } from './dashBoard.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('DashBoardComponent', () => {
   let component: DashBoardComponent;
@@ -11,7 +12,8 @@ describe('DashBoardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashBoardComponent ]
+      declarations: [ DashBoardComponent ],
+      providers:[HttpClient,HttpHandler]
     })
     .compileComponents();
   }));

@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AboutComponent } from './about.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -13,7 +14,8 @@ describe('AboutComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ AboutComponent ],
-      schemas:[NO_ERRORS_SCHEMA]
+      schemas:[NO_ERRORS_SCHEMA],
+      providers:[HttpClient,HttpHandler]
     })
     .compileComponents();
   }));

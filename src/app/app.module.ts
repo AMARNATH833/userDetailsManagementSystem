@@ -15,11 +15,12 @@ import { DashBoardComponent } from './dashBoard/dashBoard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from './user.service';
 import { UpdateComponent } from './update/update.component';
+import { CreateComponent } from './create/create.component';
 
 
 
 @NgModule({
-  declarations: [													
+  declarations: [														
     AppComponent,
       LoginComponent,
       AboutComponent,
@@ -29,7 +30,8 @@ import { UpdateComponent } from './update/update.component';
       HomeComponent,
       FooterComponent,
       DashBoardComponent,
-      UpdateComponent
+      UpdateComponent,
+      CreateComponent
    ],
   imports: [
     BrowserModule,
