@@ -4,9 +4,9 @@ footer{
     background-color: darksalmon;
     color: white;
     padding-bottom: 21px;
-    position:fixed;
+    /* position:fixed; */
     bottom: 0;
-    width: 96rem;
+    width: 94rem;
     left: 0;
     right: 0;
 }

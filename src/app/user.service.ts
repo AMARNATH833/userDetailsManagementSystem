@@ -32,9 +32,6 @@ export class UserService {
     const url=`${this.url}/${user.id}`;
     return this.http.put<Users>(url,user,this.httpOptions).pipe(map(()=>user))
   }
-  addUser(){
-    
-  }
   
 }
 

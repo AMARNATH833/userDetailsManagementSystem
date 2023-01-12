@@ -1,6 +1,8 @@
-<div>
-  <div id="form" >
-    <label>id:</label>
+<div id="mainContainer">
+  
+  <div id="form"> 
+    <h1>Updation</h1>
+    <label>ID:</label><br>
     <input type="text" [(ngModel)]="user.id"><br>
     <label>Name:</label><br>
     <input type="text" [(ngModel)]="user.name"><br>
@@ -8,8 +10,8 @@
     <input type="text" [(ngModel)]="user.password"><br>
     <label>Role:</label><br>
     <input type="text" [(ngModel)]="user.role"><br>
-    <label>IMAGE:</label><br>
-    <input type="text" [(ngModel)]="user.image"><br>
+    <label>Image:</label><br>
+    <input type="text" [(ngModel)]="user.image"><br><br>
     <button type="submit" (click)="update()">Submit</button>
   </div>
 </div>

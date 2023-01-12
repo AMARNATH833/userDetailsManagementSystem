@@ -8,7 +8,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  title="About my Project";
+  title="About : User Details Management Systems";
   // componentName="aboutUser"
   logout() {
   this.auth.loggedIn=false;
