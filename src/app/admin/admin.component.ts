@@ -39,10 +39,10 @@ export class AdminComponent implements OnInit {
   }
   
   logout(){
-    // this.router.navigate(['/home']);
-    alert("You logged out of the Site");
     this.auth.loggedIn=false;
+    // sessionStorage.clear();
+    // sessionStorage.removeItem('password')
+    localStorage.removeItem('password')
     this.router.navigate(['/home']);
-    sessionStorage.clear();
   }
 }

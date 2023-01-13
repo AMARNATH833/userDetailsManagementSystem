@@ -9,7 +9,6 @@ import { AuthService } from '../auth.service';
 })
 export class AboutComponent implements OnInit {
   title="About : User Details Management Systems";
-  // componentName="aboutUser"
   logout() {
   this.auth.loggedIn=false;
   this.router.navigate(['home']);

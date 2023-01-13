@@ -18,18 +18,24 @@ export class DashBoardComponent implements OnInit {
   count: any;
 
   
-  nameValue=sessionStorage.getItem('name');
-  passwordValue=sessionStorage.getItem('password');
+  nameValue=localStorage.getItem('name');
+  passwordValue=localStorage.getItem('password');
+  
   constructor(private auth:AuthService,private router:Router,private userservice:UserService) { }
   
   ngOnInit() {
+    console.log(this.nameValue)
     this.userservice.getUserDetails().subscribe(response=>{this.mug=response})
+    
   }
 
   logout(){
-    alert("You logged out of the Site")
+    // alert("You logged out of the Site")
     this.auth.loggedIn=false;
+    localStorage.removeItem('password')
+    localStorage.removeItem('name')
+    this.mug=[];
     this.router.navigate(['/home']);
-    sessionStorage.clear();
+
   }
 }

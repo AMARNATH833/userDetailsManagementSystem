@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
  
   Login(){
     let inputData={name:this.loginForm.value.name,password:this.loginForm.value.password};
-    sessionStorage.setItem('name',inputData.name);
-    sessionStorage.setItem('password',inputData.password);
+    localStorage.setItem('name',inputData.name);
+    localStorage.setItem('password',inputData.password);
     
     this.auth.login(this.loginForm.value.name , this.loginForm.value.password).subscribe(()=>{
       if(this.loginForm.value.name == "AdminLogin" && this.loginForm.value.password == "Adminlogg@111"){

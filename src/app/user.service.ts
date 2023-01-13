@@ -10,7 +10,7 @@ import { UserFetch } from './userFetch';
 })
 export class UserService {
 
-  passwordValue=sessionStorage.getItem('password')
+  passwordValue=localStorage.getItem('password')
 
   url:string="http://localhost:3000/details";
   Userurl:string="http://localhost:3000/details?password="+this.passwordValue;
