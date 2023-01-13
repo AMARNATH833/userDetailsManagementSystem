@@ -4,18 +4,25 @@ import { Users } from './user';
 import { catchError, map, Observable } from 'rxjs';
 import { UserFetch } from './userFetch';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
- url:string="http://localhost:3000/details";
+
+  passwordValue=sessionStorage.getItem('password')
+
+  url:string="http://localhost:3000/details";
+  Userurl:string="http://localhost:3000/details?password="+this.passwordValue;
+  
+  // Userurl:string="http://localhost:3000/details?name=this.nameValue&password="+this.passwordValue;
+//  http://localhost:3000/details?name=AmarSplash&password=Amar@Splash1122
 
  headers=new HttpHeaders().set('Content-Type','application/json').set('Accept','application/json');
  httpOptions={
   headers: this.headers
  }
  
-
   constructor(private http:HttpClient) { }
   getDetails(){
     return this.http.get<Users[]>(this.url);
@@ -32,7 +39,9 @@ export class UserService {
     const url=`${this.url}/${user.id}`;
     return this.http.put<Users>(url,user,this.httpOptions).pipe(map(()=>user))
   }
-  
+  getUserDetails(){
+    return this.http.get<Users[]>(this.Userurl);
+  }
 }
 
 

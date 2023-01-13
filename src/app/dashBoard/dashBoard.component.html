@@ -1,5 +1,5 @@
-<h1>DashBoard Works</h1>
-<button (click)="logout()">LOGOUT</button>
+<h1>User Dashboard</h1>
+
 <table>
     <thead>
         <tr>
@@ -7,15 +7,17 @@
             <th>name</th>
             <th>password</th>
             <th>role</th>
+            <th>image</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let count of users">
+        <tr *ngFor="let count of mug">
         <td>{{count.id}}</td>
         <td>{{count.name}}</td>
         <td>{{count.password}}</td>
         <td>{{count.role}}</td>
-        <td><button>update</button></td>
+        <td><img style="width: 100px" src="{{count.image}}"></td>
         </tr>
     </tbody>
 </table>
+<button (click)="logout()">LOGOUT</button><br>

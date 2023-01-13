@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   [x: string]: any;
   isSubmitted:boolean=false;
   isValidUser:boolean=false;
+  session:any;
   
   public loginForm:FormGroup|any;
   
@@ -26,6 +27,10 @@ export class LoginComponent implements OnInit {
   }
  
   Login(){
+    let inputData={name:this.loginForm.value.name,password:this.loginForm.value.password};
+    sessionStorage.setItem('name',inputData.name);
+    sessionStorage.setItem('password',inputData.password);
+    
     this.auth.login(this.loginForm.value.name , this.loginForm.value.password).subscribe(()=>{
       if(this.loginForm.value.name == "AdminLogin" && this.loginForm.value.password == "Adminlogg@111"){
         this.auth.loggedIn=true;
@@ -36,7 +41,9 @@ export class LoginComponent implements OnInit {
           this.http.get<any>("http://localhost:3000/details")
         .subscribe(res=>{
           const user=res.find((data:any)=>{
-            return data.name === this.loginForm.value.name && data.password === this.loginForm.value.password});
+            return data.name === this.loginForm.value.name && data.password === this.loginForm.value.password
+            
+          });
           if(user){
             // alert("Login sucess");
             this.loginForm.reset();

@@ -4,6 +4,7 @@ import { AuthService } from '../auth.service';
 import { Users } from '../user';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { UserService } from '../user.service';
+import { name } from '../verify.validation';
 
 @Component({
   selector: 'app-dashBoard',
@@ -13,19 +14,22 @@ import { UserService } from '../user.service';
 })
 export class DashBoardComponent implements OnInit {
 
-  users:Users[]=[];
+  mug:Users[]=[];
   count: any;
 
-
+  
+  nameValue=sessionStorage.getItem('name');
+  passwordValue=sessionStorage.getItem('password');
   constructor(private auth:AuthService,private router:Router,private userservice:UserService) { }
   
   ngOnInit() {
-    this.userservice.getDetails().subscribe(response=>{this.users=response})
+    this.userservice.getUserDetails().subscribe(response=>{this.mug=response})
   }
 
   logout(){
     alert("You logged out of the Site")
     this.auth.loggedIn=false;
     this.router.navigate(['/home']);
+    sessionStorage.clear();
   }
 }

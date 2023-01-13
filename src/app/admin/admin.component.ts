@@ -11,12 +11,13 @@ import { Observable } from 'rxjs';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
+
 export class AdminComponent implements OnInit {
   title="admin";
   users:Users[]=[];
   p:number=1;
 
-  public linkURL="http://localhost:3000/details";
+  // public linkURL="http://localhost:3000/details";
 
   constructor(private userservice:UserService,private http:HttpClient,private router:Router,private auth:AuthService) {}
 
@@ -42,5 +43,6 @@ export class AdminComponent implements OnInit {
     alert("You logged out of the Site");
     this.auth.loggedIn=false;
     this.router.navigate(['/home']);
+    sessionStorage.clear();
   }
 }

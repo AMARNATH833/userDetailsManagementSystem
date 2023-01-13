@@ -11,8 +11,19 @@ p{
     margin-top: 100px;
     color: aliceblue;
 }
-button{
-    
+.ButtonOne{
+    background-color: rgb(25, 19, 31);
+    color: white;  
+    padding: 10px;
+    margin: 20px;
+    border-radius: 12px;
+}
+.ButtonTwo{
+    background-color: rgba(133, 222, 23, 0.64);
+    color: rgb(29, 4, 4);
+    padding: 10px;
+    margin: 20px;
+    border-radius: 12px;
 }
 .main{
     background-image: url('../../assets/home.png');
