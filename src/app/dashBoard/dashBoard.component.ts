@@ -30,7 +30,7 @@ export class DashBoardComponent implements OnInit {
 
   logout(){
     // alert("You logged out of the Site")
-    this.auth.loggedIn=false;
+    this.userservice.loggedIn=false;
     localStorage.removeItem('password')
     localStorage.removeItem('name')
     this.mug=[];

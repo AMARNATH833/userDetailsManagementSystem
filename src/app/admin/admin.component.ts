@@ -39,7 +39,7 @@ export class AdminComponent implements OnInit {
   }
   
   logout(){
-    this.auth.loggedIn=false;
+    this.userservice.loggedIn=false;
     // sessionStorage.clear();
     // sessionStorage.removeItem('password')
     localStorage.removeItem('password')

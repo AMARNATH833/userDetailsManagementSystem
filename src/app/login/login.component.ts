@@ -4,6 +4,7 @@ import { Data, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { name,password } from '../verify.validation';
 import { AuthService } from '../auth.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   
   public loginForm:FormGroup|any;
   
-  constructor(private fb:FormBuilder,private http:HttpClient,private router:Router,private auth:AuthService) { }
+  constructor(private fb:FormBuilder,private http:HttpClient,private router:Router,private auth:AuthService,private userservice:UserService) { }
  
   ngOnInit() {
     this.loginForm=this.fb.group({
@@ -34,7 +35,7 @@ export class LoginComponent implements OnInit {
     
     this.auth.login(this.loginForm.value.name , this.loginForm.value.password).subscribe(()=>{
       if(this.loginForm.value.name == "AdminLogin" && this.loginForm.value.password == "Adminlogg@111"){
-        this.auth.loggedIn=true;
+        this.userservice.loggedIn=true;
         this.router.navigate(['admin']);
       }
       else{ 
@@ -48,7 +49,7 @@ export class LoginComponent implements OnInit {
           if(user){
             // alert("Login sucess");
             this.loginForm.reset();
-            this.auth.loggedIn=true;
+            this.userservice.loggedIn=true;
             this.router.navigate(['dashboard'])
           }else{
             alert("user not found");

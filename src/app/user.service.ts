@@ -16,6 +16,8 @@ export class UserService {
   Userurl:string="http://localhost:3000/details?password="+this.passwordValue;
   
 
+  loggedIn:boolean=false;
+
   headers=new HttpHeaders().set('Content-Type','application/json').set('Accept','application/json');
   httpOptions={
   headers: this.headers
