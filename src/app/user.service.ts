@@ -15,13 +15,11 @@ export class UserService {
   url:string="http://localhost:3000/details";
   Userurl:string="http://localhost:3000/details?password="+this.passwordValue;
   
-  // Userurl:string="http://localhost:3000/details?name=this.nameValue&password="+this.passwordValue;
-//  http://localhost:3000/details?name=AmarSplash&password=Amar@Splash1122
 
- headers=new HttpHeaders().set('Content-Type','application/json').set('Accept','application/json');
- httpOptions={
+  headers=new HttpHeaders().set('Content-Type','application/json').set('Accept','application/json');
+  httpOptions={
   headers: this.headers
- }
+  }
  
   constructor(private http:HttpClient) { }
   getDetails(){
@@ -42,34 +40,8 @@ export class UserService {
   getUserDetails(){
     return this.http.get<Users[]>(this.Userurl);
   }
+  logout(){
+    
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  // update(id,user):Observable<Users>{
-  //   return this.http.put<Users>(this.url+''+id,JSON.stringify(Users),this.httpOptions)
-  //   .pipe(
-  //   )
-  // }
-
-  // update(id,users):Observable<Users>{
-  //   return this.http.put<Users>(this.url+'/user/'+id,JSON.stringify(users),this.httpOptions)
-  //   .pipe(
-      
-  //   )
-  // }
-

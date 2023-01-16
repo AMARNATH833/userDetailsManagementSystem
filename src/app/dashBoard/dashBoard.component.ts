@@ -26,7 +26,6 @@ export class DashBoardComponent implements OnInit {
   ngOnInit() {
     console.log(this.nameValue)
     this.userservice.getUserDetails().subscribe(response=>{this.mug=response})
-    
   }
 
   logout(){
@@ -36,6 +35,5 @@ export class DashBoardComponent implements OnInit {
     localStorage.removeItem('name')
     this.mug=[];
     this.router.navigate(['/home']);
-
   }
 }

@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   public loginForm:FormGroup|any;
   
   constructor(private fb:FormBuilder,private http:HttpClient,private router:Router,private auth:AuthService) { }
+ 
   ngOnInit() {
     this.loginForm=this.fb.group({
       name:['',name],
@@ -56,8 +57,7 @@ export class LoginComponent implements OnInit {
           alert("Something went wrong");
         })
       }
-      // this.isSubmitted=false;
-      // this.isValidUser=true;
+      
     })
   }
 }

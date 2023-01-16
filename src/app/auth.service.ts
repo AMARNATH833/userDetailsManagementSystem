@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { Users } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +11,23 @@ import { Observable, of } from 'rxjs';
 export class AuthService {
 
   loggedIn:boolean=false;
+  url:string="http://localhost:3000/details";
+  user:Users[]=[];
 
   public loginForm:FormGroup|any;
+  
   constructor(private router:Router,private http:HttpClient) { }
+
+  // create(user: any):Observable<Users>{
+  //   return this.http.post<user>(this.url+'/'+JSON.stringify(user))
+  // }
 
   login(name:string,password:string):Observable<boolean>{
     
-    if(name === 'admin' && password === 'Admin@123'){
-      this.loggedIn=true;
-      return of(true);
-    }
+    // if(name === 'admin' && password === 'Admin@123'){
+    //   this.loggedIn=true;
+    //   return of(true);
+    // }
     
 
 

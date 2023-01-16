@@ -13,14 +13,12 @@ export class CreateComponent implements OnInit {
 
   addUser: any;
 
+  constructor(private router:Router,private http:HttpClient,private userservice:UserService) {
 
-  constructor(private router:Router,private http:HttpClient,private userservice:UserService) { }
+   }
 
-  ngOnInit() {
+  ngOnInit(){
+
   }
-  // create(addUser:NgForm){
-  //   this.userservice.addUser(addUser.value).subscribe();
-  //   this.router.navigate(['/admin']);
-  // }
 
 }

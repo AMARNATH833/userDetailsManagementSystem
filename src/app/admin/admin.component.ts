@@ -29,7 +29,7 @@ export class AdminComponent implements OnInit {
     if(confirm("Are you sure to delete this data ?")){
     this.userservice.deleteUser(val).subscribe(data=>{});
     this.userservice.getDetails().subscribe((response)=>{
-      this.users=response;
+    this.users=response;
     });
   }
   }

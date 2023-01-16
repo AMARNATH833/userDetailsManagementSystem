@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
@@ -7,16 +7,14 @@ import { AuthService } from '../auth.service';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent{
   title="About : User Details Management Systems";
-  logout() {
-  this.auth.loggedIn=false;
-  this.router.navigate(['home']);
-  }
+  
 
   constructor(private auth:AuthService,private router:Router) { }
 
-  ngOnInit() {
-  }
-
+  logout() {
+    this.auth.loggedIn=false;
+    this.router.navigate(['home']);
+    }
 }
