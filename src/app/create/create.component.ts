@@ -11,14 +11,9 @@ import { UserService } from '../user.service';
 })
 export class CreateComponent implements OnInit {
 
-  addUser: any;
-
-  constructor(private router:Router,private http:HttpClient,private userservice:UserService) {
-
-   }
+  constructor() {}
 
   ngOnInit(){
 
   }
-
 }

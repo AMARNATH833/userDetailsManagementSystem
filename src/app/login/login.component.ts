@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     
     this.auth.login(this.loginForm.value.name , this.loginForm.value.password).subscribe(()=>{
       if(this.loginForm.value.name == "AdminLogin" && this.loginForm.value.password == "Adminlogg@111"){
-        this.userservice.loggedIn=true;
+        this.auth.loggedIn=true;
         this.router.navigate(['admin']);
       }
       else{ 
@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
           if(user){
             // alert("Login sucess");
             this.loginForm.reset();
-            this.userservice.loggedIn=true;
+            this.auth.loggedIn=true;
             this.router.navigate(['dashboard'])
           }else{
             alert("user not found");

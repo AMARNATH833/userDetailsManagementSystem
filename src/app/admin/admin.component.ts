@@ -40,9 +40,9 @@ export class AdminComponent implements OnInit {
   
   logout(){
     this.userservice.loggedIn=false;
-    // sessionStorage.clear();
-    // sessionStorage.removeItem('password')
-    localStorage.removeItem('password')
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.clear();
     this.router.navigate(['/home']);
   }
 }

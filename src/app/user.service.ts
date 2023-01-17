@@ -10,12 +10,12 @@ import { UserFetch } from './userFetch';
 })
 export class UserService {
 
+  nameValue=localStorage.getItem('username');
   passwordValue=localStorage.getItem('password')
 
   url:string="http://localhost:3000/details";
-  Userurl:string="http://localhost:3000/details?password="+this.passwordValue;
+  Userurl:string="http://localhost:3000/details?password="+this.passwordValue+"&username="+this.nameValue;
   
-
   loggedIn:boolean=false;
 
   headers=new HttpHeaders().set('Content-Type','application/json').set('Accept','application/json');
@@ -42,8 +42,5 @@ export class UserService {
   getUserDetails(){
     return this.http.get<Users[]>(this.Userurl);
   }
-  logout(){
-    
-  }
-
+  
 }

@@ -28,11 +28,11 @@ export class UpdateComponent implements OnInit {
   update(){
     this.userservice.UpdateUser(this.user).subscribe(data=>{});
     this.getUsers();
-    this.router.navigate(['/admin']);
+    this.userservice.loggedIn=false;
+    console.log("Updated successfully")
+    this.router.navigate(['/login']);
   }
   getUsers(){
-      this.userservice.getDetails().subscribe((response)=>{
-        this.users=response;
-      }) 
+      this.userservice.getDetails().subscribe((response)=>{this.users=response;}) 
     }
   }

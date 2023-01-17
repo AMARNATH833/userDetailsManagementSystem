@@ -1,21 +1,21 @@
 table{
     position: relative;
-    left: 300px;
+    left: 100px;
     border: 5px tomato solid;
     margin-bottom: px;
     padding: 100px;
 }
 tr,td{
-    padding: 30px;
+    padding: 10px;
     margin: 20px;
-    width: 50px;
+    width: 10px;
 }
 button{
     border-radius: 10px;
     padding: 15px;
-    margin-left: 720px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-left: 600px;
+    margin-bottom: 20px;
+    margin-top: 18px;
     background-color: rgb(79, 180, 51);
     color: white;
 }
