@@ -42,5 +42,9 @@ export class UserService {
   getUserDetails(){
     return this.http.get<Users[]>(this.Userurl);
   }
+  create(data:any){
+    return this.http.post(this.url,data)
+    
+  }
   
 }

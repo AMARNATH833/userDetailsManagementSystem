@@ -2,20 +2,19 @@
 
   <div>
     <label>ID:</label><pre></pre>
-    <input type="number" placeholder="Enter the ID of the User" required><pre></pre>
+    <input type="number" ngModel placeholder="Enter the ID of the User" required ><pre></pre>
   
     <label>NAME:</label><pre></pre>
-    <input type="text" placeholder="Enter the Name of the User" required><pre></pre>
-  
+    <input type="text" ngModel placeholder="Enter the Name of the User" required ngModel><pre></pre>
+
     <label>PASSWORD:</label><pre></pre>
-    <input type="text" placeholder="Enter password for that user" required><pre></pre>
+    <input type="text" ngModel placeholder="Enter password for that user" required ngModel><pre></pre>
   
     <label>ROLE:</label><pre></pre>
-    <input type="text" placeholder="Enter the ROLE for the User" required><pre></pre>
+    <input type="text" ngModel placeholder="Enter the ROLE for the User" required ngModel><pre></pre>
   
     <label>IMAGE:</label><pre></pre>
-    <input type="text" placeholder="Enter the URl of the IMAGE" required><pre></pre>
+    <input type="text" ngModel placeholder="Enter the URl of the IMAGE" required ngModel><pre></pre>
   
-    <button>SUBMIT</button>
+    <button type="submit" (click)="createUser()">SUBMIT</button> 
   </div>
-

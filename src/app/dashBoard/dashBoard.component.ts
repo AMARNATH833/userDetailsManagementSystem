@@ -16,6 +16,7 @@ export class DashBoardComponent implements OnInit {
 
   mug:Users[]=[];
   count: any;
+  showFiller = false;
 
   nameValue=localStorage.getItem('name');
   passwordValue=localStorage.getItem('password');
@@ -36,5 +37,8 @@ export class DashBoardComponent implements OnInit {
     localStorage.clear();
     this.mug=[];
     this.router.navigate(['/home']);
+  }
+  toggle(){
+    
   }
 }

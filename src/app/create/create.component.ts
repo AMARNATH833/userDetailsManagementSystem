@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+import { Users } from '../user';
 
 @Component({
   selector: 'app-create',
@@ -11,9 +12,20 @@ import { UserService } from '../user.service';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() {}
+  users:Users[]=[];
+
+  response:any;
+  value:any;
+
+  constructor(private userservice:UserService,private router:Router) {}
 
   ngOnInit(){
 
+  }
+  createUser(){
+    this.userservice.create(this.value).subscribe(data=>{this.response=data});
+    console.log("Creation successfull")
+    
+    this.router.navigate(['/admin']); 
   }
 }
