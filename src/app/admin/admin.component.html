@@ -1,33 +1,43 @@
-<h1>Admin Dashboard</h1>
-
-<div id="icon">
-  <button routerLink="/about" routerLinkActive="active">About</button>
-  <button routerLink="/create">CREATE</button>
-  <button (click)="logout()">Logout</button>
-</div>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Password</th>
-      <th>Role</th>
-      <th>IMAGE</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of users">
-    <td>{{user.id}}</td>
-    <td>{{user.name}}</td>
-    <td>{{user.password}}</td>
-    <td>{{user.role}}</td>
-    <td><img style="width: 100px;" src="{{user.image}}"></td>
-    <td>
-      <button type="button" class="buttonOne" (click)="deleteUser(user.id)">Delete</button>
-      <button type="button" class="buttonTwo" (click)="update(user.id)">Update</button>
-    </td>
-    </tr>
-  </tbody>
-</table>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon class="matIcon" (click)="sidenav.toggle()"></mat-icon>
+    </button>
+    <h1>Admin Dashboard</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/about">ABOUT</a>
+      <a mat-list-item (click)="logout()">LOGOUT</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Password</th>
+          <th>Role</th>
+          <th>IMAGE</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.role}}</td>
+        <td><img style="width: 100px;" src="{{user.image}}"></td>
+        <td>
+          <button type="button" class="buttonOne" (click)="deleteUser(user.id)">Delete</button>
+          <button type="button" class="buttonTwo" (click)="update(user.id)">Update</button>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-sidenav-content>
+</mat-sidenav-container>

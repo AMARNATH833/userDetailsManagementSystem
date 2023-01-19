@@ -1,41 +1,38 @@
-<h1>User Dashboard</h1>
-
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Toggle extra text
-      </button>
-    </mat-drawer>
-  
-<div class="example-sidenav-content">
-    <button type="button" mat-button (click)="toggle()">
-    Toggle sidenav
-    </button>
-</div>  
-</mat-drawer-container>
-
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Password</th>
-            <th>Role</th>
-            <th>Image</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let count of mug">
-        <td>{{count.id}}</td>
-        <td>{{count.name}}</td>
-        <td>{{count.password}}</td>
-        <td>{{count.role}}</td>
-        <td><img style="width: 100px" src="{{count.image}}"></td>
-        <td><button type="button" (click)="update(count.id)">UPDATE</button></td>
-        </tr>
-    </tbody>
-</table>
-<button (click)="logout()">LOGOUT</button><br>
+<mat-toolbar >
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();"></mat-icon>
+        </button>
+        <h1>USER DASHBOARD</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <a mat-list-item (click)="logout()">Logout</a>
+            <a mat-list-item *ngFor="let amar of mug" (click)="update(amar.id)">Update</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Password</th>
+                    <th>Role</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let count of mug">
+                <td>{{count.id}}</td>
+                <td>{{count.name}}</td>
+                <td>{{count.password}}</td>
+                <td>{{count.role}}</td>
+                <td><img style="width: 100px" src="{{count.image}}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-sidenav-content>
+</mat-sidenav-container>

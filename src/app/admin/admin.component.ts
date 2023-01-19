@@ -37,7 +37,6 @@ export class AdminComponent implements OnInit {
   update(id:Number){
     this.router.navigate(['/update',id]);
   }
-  
   logout(){
     this.userservice.loggedIn=false;
     localStorage.removeItem('username');

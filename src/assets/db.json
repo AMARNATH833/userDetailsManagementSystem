@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Amarnath",
-      "password": "Aspire@123",
+      "password": "Aspire@1234",
       "role": "Developerr",
       "image": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
@@ -17,7 +17,7 @@
     {
       "id": "3",
       "name": "AmarSplash",
-      "password": "Amar@Splash1122",
+      "password": "Amar@Splash1124",
       "role": "Developer",
       "image": "https://media.gettyimages.com/id/1314489757/photo/smiling-hispanic-man-against-white-background.jpg?s=612x612&w=gi&k=20&c=mU_OXyCcBWewSUuA-IQE7LYuwo7FtHqX8pVnpNSSXcQ="
     },
@@ -69,12 +69,6 @@
       "password": "Dhanu$111",
       "role": "Developer",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyxcix3eP94SK6SQvfKX1Tk1H4UbTK7FmB8w&usqp=CAU"
-    },
-    {
-      "id": "R8LSAzu"
-    },
-    {
-      "id": "SL2Ag4Y"
     }
   ],
   "admin": [

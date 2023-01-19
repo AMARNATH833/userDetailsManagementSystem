@@ -15,7 +15,10 @@ export class AboutComponent{
   constructor(private auth:AuthService,private router:Router,private userservice:UserService) { }
 
   logout() {
-    this.userservice.loggedIn=false;
+    this.auth.loggedIn=false;
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.clear();
     this.router.navigate(['home']);
     }
 }

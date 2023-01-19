@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { Users } from '../user';
+import { UserFetch } from '../userFetch';
 
 @Component({
   selector: 'app-create',
@@ -13,7 +14,7 @@ import { Users } from '../user';
 export class CreateComponent implements OnInit {
 
   users:Users[]=[];
-
+  user!:UserFetch;
   response:any;
   value:any;
 

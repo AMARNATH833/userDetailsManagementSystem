@@ -40,5 +40,10 @@ button{
 }
 h1{
     text-align: center;
-    
+}
+mat-sidenav-content{
+    background-color: white;
+}
+.matIcon{
+    background-color: aliceblue;
 }
