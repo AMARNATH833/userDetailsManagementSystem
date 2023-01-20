@@ -11,15 +11,15 @@ import { LoginComponent } from './login/login.component';
 import { UpdateComponent } from './update/update.component';
 
 const routes: Routes = [
-  {path:'home',title:'Home',component:HomeComponent},
-  {path:'login',title:'Login',component:LoginComponent},
-  {path:'about',title:'About',component:AboutComponent,canActivate:[AuthGuard]},
-  {path:'dashboard',title:'DashBoard',component:DashBoardComponent,canActivate:[AuthGuard]},
-  {path:'admin',title:'AdminPage',component:AdminComponent,canActivate:[AuthGuard]},
-  {path:'update/:id',title:'UPDATE',component:UpdateComponent,canActivate:[AuthGuard]},
-  {path:'create',title:'CREATE',component:CreateComponent,canActivate:[AuthGuard]},
-  {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'**',title:'PAGENOTFOUND',component:ErrorPageComponent}
+  { path: 'home', title: 'Home', component: HomeComponent },
+  { path: 'login', title: 'Login', component: LoginComponent },
+  { path: 'about', title: 'About', component: AboutComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', title: 'DashBoard', component: DashBoardComponent, canActivate: [AuthGuard] },
+  { path: 'admin', title: 'AdminPage', component: AdminComponent, canActivate: [AuthGuard] },
+  { path: 'update/:id', title: 'UPDATE', component: UpdateComponent, canActivate: [AuthGuard] },
+  { path: 'create', title: 'CREATE', component: CreateComponent, canActivate: [AuthGuard] },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', title: 'PAGENOTFOUND', component: ErrorPageComponent }
 ];
 // 
 

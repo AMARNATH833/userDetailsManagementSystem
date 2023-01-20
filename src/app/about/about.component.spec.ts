@@ -13,11 +13,11 @@ describe('AboutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutComponent ],
-      schemas:[NO_ERRORS_SCHEMA],
-      providers:[HttpClient,HttpHandler]
+      declarations: [AboutComponent],
+      schemas: [NO_ERRORS_SCHEMA],
+      providers: [HttpClient, HttpHandler]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -29,15 +29,5 @@ describe('AboutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  // it(`should have as title 'About my Project...'`,()=>{
-  //   const fixture=TestBed.createComponent(AboutComponent);
-  //   const app=fixture.debugElement.componentInstance;
-  //   expect(app.title).toEqual('About my Project...')
-  // })
-  // it('should have the title',()=>{
-  //   expect(component.title).toBe('About my Project');
-  //   const title=fixture.debugElement.query(By.css('h1')).nativeElement;
-  //   expect(title.innerHTML).toBe('About my Project');
-  // });
-  
+
 });

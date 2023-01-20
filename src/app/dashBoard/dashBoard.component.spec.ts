@@ -12,10 +12,10 @@ describe('DashBoardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashBoardComponent ],
-      providers:[HttpClient,HttpHandler]
+      declarations: [DashBoardComponent],
+      providers: [HttpClient, HttpHandler]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

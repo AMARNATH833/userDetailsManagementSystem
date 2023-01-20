@@ -10,32 +10,31 @@ import { name } from '../verify.validation';
   selector: 'app-dashBoard',
   templateUrl: './dashBoard.component.html',
   styleUrls: ['./dashBoard.component.css'],
-  providers:[AuthService]
+  providers: [AuthService]
 })
 export class DashBoardComponent implements OnInit {
 
-  mug:Users[]=[];
+  mug: Users[] = [];
   count: any;
   showFiller = false;
 
-  nameValue=localStorage.getItem('name');
-  passwordValue=localStorage.getItem('password');
-  
-  constructor(private auth:AuthService,private router:Router,private userservice:UserService) { }
-  
+  nameValue = localStorage.getItem('name');
+  passwordValue = localStorage.getItem('password');
+
+  constructor(private auth: AuthService, private router: Router, private userservice: UserService) { }
+
   ngOnInit() {
-    this.userservice.getUserDetails().subscribe(response=>{this.mug=response})
+    this.userservice.getUserDetails().subscribe(response => { this.mug = response })
   }
-  update(id:Number){
-    this.router.navigate(['/update',id])
+  update(id: Number) {
+    this.router.navigate(['/update', id])
   }
-  
-  logout(){
-    this.userservice.loggedIn=false;
+
+  logout() {
+    this.userservice.loggedIn = false;
     localStorage.removeItem('password')
     localStorage.removeItem('username')
     localStorage.clear();
     this.router.navigate(['/home']);
-    // this.userservice.logout();
   }
 }

@@ -8,7 +8,7 @@ describe('AuthGuard', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers:[HttpClient,HttpHandler]
+      providers: [HttpClient, HttpHandler]
     });
     guard = TestBed.inject(AuthGuard);
   });

@@ -1,21 +1,31 @@
 <button mat-button routerLink="/admin">Admin</button>
 <form #create="ngForm" (ngSubmit)="createUser(create)">
   <div>
-    <label>ID:</label><pre></pre>
-    <input type="number" ngModel placeholder="Enter the ID of the User" required name="id"><pre></pre>
-  
-    <label>NAME:</label><pre></pre>
-    <input type="text" ngModel placeholder="Enter the Name of the User" required name="name"><pre></pre>
+    <label>ID:</label>
+    <pre></pre>
+    <input type="number" ngModel placeholder="Enter the ID of the User" required name="id">
+    <pre></pre>
 
-    <label>PASSWORD:</label><pre></pre>
-    <input type="text" ngModel placeholder="Enter password for that user" required name="password"><pre></pre>
-  
-    <label>ROLE:</label><pre></pre>
-    <input type="text" ngModel placeholder="Enter the ROLE for the User" required name="role"><pre></pre>
-  
-    <label>IMAGE:</label><pre></pre>
-    <input type="text" ngModel placeholder="Enter the URl of the IMAGE" required name="image"><pre></pre>
-  
-    <button type="submit">SUBMIT</button> 
+    <label>NAME:</label>
+    <pre></pre>
+    <input type="text" ngModel placeholder="Enter the Name of the User" required name="name">
+    <pre></pre>
+
+    <label>PASSWORD:</label>
+    <pre></pre>
+    <input type="text" ngModel placeholder="Enter password for that user" required name="password">
+    <pre></pre>
+
+    <label>ROLE:</label>
+    <pre></pre>
+    <input type="text" ngModel placeholder="Enter the ROLE for the User" required name="role">
+    <pre></pre>
+
+    <label>IMAGE:</label>
+    <pre></pre>
+    <input type="text" ngModel placeholder="Enter the URl of the IMAGE" required name="image">
+    <pre></pre>
+
+    <button type="submit">SUBMIT</button>
   </div>
 </form>

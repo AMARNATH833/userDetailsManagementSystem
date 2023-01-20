@@ -10,16 +10,16 @@ import { HttpClient, HttpHandler } from '@angular/common/http';
 describe('UpdateComponent', () => {
   let component: UpdateComponent;
   let fixture: ComponentFixture<UpdateComponent>;
-  const fakeActivatedRoute={
-    snapshot:{data:{}}
+  const fakeActivatedRoute = {
+    snapshot: { data: {} }
   } as ActivatedRoute;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UpdateComponent ],
-      providers:[{provide:ActivatedRoute,useValue:fakeActivatedRoute},HttpClient,HttpHandler]
+      declarations: [UpdateComponent],
+      providers: [{ provide: ActivatedRoute, useValue: fakeActivatedRoute }, HttpClient, HttpHandler]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

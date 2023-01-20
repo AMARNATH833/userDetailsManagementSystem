@@ -9,19 +9,19 @@ import { AuthService } from './auth.service';
 export class AuthGuard implements CanActivate {
   router: any;
 
-  constructor(private auth:AuthService){}
+  constructor(private auth: AuthService) { }
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    if(this.auth.loggedIn){
+    if (this.auth.loggedIn) {
       return true;
     }
-    else{
+    else {
       console.log('Not Authorized');
       return false;
     }
   }
-  
+
 }

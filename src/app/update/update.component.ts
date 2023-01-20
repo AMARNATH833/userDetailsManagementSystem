@@ -10,28 +10,27 @@ import { UserFetch } from '../userFetch';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
-  
+
   member: any;
 
-  constructor(public route:ActivatedRoute,public router:Router,public userservice:UserService) { }
-  value:any;
-  users:Users[]=[];
+  constructor(public route: ActivatedRoute, public router: Router, public userservice: UserService) { }
+  value: any;
+  users: Users[] = [];
   user!: UserFetch;
-  
+
   ngOnInit() {
-    let sub=this.route.params.subscribe(paras=>{
-      this.value=paras['id'];
+    let sub = this.route.params.subscribe(paras => {
+      this.value = paras['id'];
     });
-    console.log(this.value);
-    this.userservice.getUpdateUser(this.value).subscribe(data=>{this.user=data})
+    this.userservice.getUpdateUser(this.value).subscribe(data => { this.user = data })
   }
-  update(){
-    this.userservice.UpdateUser(this.user).subscribe(data=>{});
+  update() {
+    this.userservice.UpdateUser(this.user).subscribe(data => { });
     this.getUsers();
-    this.userservice.loggedIn=false;
+    this.userservice.loggedIn = false;
     this.router.navigate(['/login']);
   }
-  getUsers(){
-      this.userservice.getDetails().subscribe((response)=>{this.users=response;}) 
-    }
+  getUsers() {
+    this.userservice.getDetails().subscribe((response) => { this.users = response; })
   }
+}

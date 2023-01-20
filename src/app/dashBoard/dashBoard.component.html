@@ -1,4 +1,4 @@
-<mat-toolbar >
+<mat-toolbar>
     <mat-toolbar-row>
         <button mat-icon-button>
             <mat-icon (click)="sidenav.toggle();"></mat-icon>
@@ -26,11 +26,11 @@
             </thead>
             <tbody>
                 <tr *ngFor="let count of mug">
-                <td>{{count.id}}</td>
-                <td>{{count.name}}</td>
-                <td>{{count.password}}</td>
-                <td>{{count.role}}</td>
-                <td><img style="width: 100px" src="{{count.image}}"></td>
+                    <td>{{count.id}}</td>
+                    <td>{{count.name}}</td>
+                    <td>{{count.password}}</td>
+                    <td>{{count.role}}</td>
+                    <td><img style="width: 100px" src="{{count.image}}"></td>
                 </tr>
             </tbody>
         </table>

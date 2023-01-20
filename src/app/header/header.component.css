@@ -1,4 +1,4 @@
-#mainContainer{
+#mainContainer {
     text-align: center;
     color: antiquewhite;
     background-color: black;
@@ -7,10 +7,12 @@
     width: 94rem;
     left: 0;
 }
-.image{
+
+.image {
     width: 1505px;
     height: 550px;
 }
-.navigationBar{
+
+.navigationBar {
     background-color: black;
 }

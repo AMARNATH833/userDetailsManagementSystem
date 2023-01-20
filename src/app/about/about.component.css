@@ -1,9 +1,10 @@
-h1{
+h1 {
     text-align: center;
     padding-top: 18px;
     color: white;
 }
-p{
+
+p {
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 200px;
@@ -11,21 +12,24 @@ p{
     margin-top: 100px;
     color: aliceblue;
 }
-.ButtonOne{
+
+.ButtonOne {
     background-color: rgb(25, 19, 31);
-    color: white;  
+    color: white;
     padding: 10px;
     margin: 20px;
     border-radius: 12px;
 }
-.ButtonTwo{
+
+.ButtonTwo {
     background-color: rgba(133, 222, 23, 0.64);
     color: rgb(29, 4, 4);
     padding: 10px;
     margin: 20px;
     border-radius: 12px;
 }
-.main{
+
+.main {
     background-image: url('../../assets/home.png');
     height: 450px;
     width: 1505px;

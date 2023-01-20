@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,28 +17,28 @@ import { UserService } from './user.service';
 import { UpdateComponent } from './update/update.component';
 import { CreateComponent } from './create/create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
-import {MatListModule} from '@angular/material/list';
-import {MatButtonModule} from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
 @NgModule({
-  declarations: [														
+  declarations: [
     AppComponent,
-      LoginComponent,
-      AboutComponent,
-      AdminComponent,
-      HeaderComponent,
-      ErrorPageComponent,
-      HomeComponent,
-      FooterComponent,
-      DashBoardComponent,
-      UpdateComponent,
-      CreateComponent
-   ],
+    LoginComponent,
+    AboutComponent,
+    AdminComponent,
+    HeaderComponent,
+    ErrorPageComponent,
+    HomeComponent,
+    FooterComponent,
+    DashBoardComponent,
+    UpdateComponent,
+    CreateComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -51,10 +51,10 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatListModule,
     MatButtonModule
-    
+
   ],
-  providers: [UserService,HttpClient],
+  providers: [UserService, HttpClient],
   bootstrap: [AppComponent],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

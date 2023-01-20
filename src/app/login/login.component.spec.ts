@@ -13,10 +13,10 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ],
-      providers:[FormBuilder,HttpClient,HttpHandler]
+      declarations: [LoginComponent],
+      providers: [FormBuilder, HttpClient, HttpHandler]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

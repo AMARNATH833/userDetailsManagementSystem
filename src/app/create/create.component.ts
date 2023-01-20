@@ -13,20 +13,20 @@ import { UserFetch } from '../userFetch';
 })
 export class CreateComponent implements OnInit {
 
-  users:Users[]=[];
-  user!:UserFetch;
-  response:any;
-  value:any;
+  users: Users[] = [];
+  user!: UserFetch;
+  response: any;
+  value: any;
 
-  constructor(private userservice:UserService,private router:Router) {}
+  constructor(private userservice: UserService, private router: Router) { }
 
-  ngOnInit(){
+  ngOnInit() {
 
   }
-  createUser(create:NgForm){
-    this.userservice.create(create.value).subscribe(data=>{this.response=data});
+  createUser(create: NgForm) {
+    this.userservice.create(create.value).subscribe(data => { this.response = data });
     console.log(create.value)
     console.log("Creation successfull")
-    this.router.navigate(['/admin']); 
+    this.router.navigate(['/admin']);
   }
 }

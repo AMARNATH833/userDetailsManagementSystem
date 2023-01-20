@@ -1,4 +1,4 @@
-#form{
+#form {
     text-align: center;
     background-color: rgba(101, 115, 198, 0.58);
     height: 470px;
@@ -7,15 +7,18 @@
     margin-bottom: 100px;
     margin-top: 30px;
     padding: 40px;
-    box-shadow:0 5px 20px rgb(81, 171, 220),0 10px 30px rgb(211, 210, 205);
+    box-shadow: 0 5px 20px rgb(81, 171, 220), 0 10px 30px rgb(211, 210, 205);
 }
-label,input{
+
+label,
+input {
     margin: 8px;
     padding: 6px;
     width: 300px;
     border-radius: 10px;
 }
-button{
+
+button {
     /* background-color:rgb(rgb(195, 44, 44), green, blue); */
     background-color: green;
     color: white;
@@ -24,10 +27,12 @@ button{
     border-radius: 10px;
     width: 200px;
 }
-h1{
+
+h1 {
     font-style: italic;
     font-size: 38px;
 }
-label{
+
+label {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -1,4 +1,4 @@
-footer{
+footer {
     text-align: center;
     padding: 3px;
     background-color: darksalmon;
@@ -10,9 +10,11 @@ footer{
     left: 0;
     right: 0;
 }
+
 a[href^='mailto']::before {
     content: '📧 ';
 }
+
 a[href^='tel']::before {
     content: '📞 ';
 }

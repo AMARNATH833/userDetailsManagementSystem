@@ -10,46 +10,15 @@ import { Users } from './user';
 })
 export class AuthService {
 
-  loggedIn:boolean=false;
-  url:string="http://localhost:3000/details";
-  user:Users[]=[];
+  loggedIn: boolean = false;
+  url: string = "http://localhost:3000/details";
+  user: Users[] = [];
 
-  public loginForm:FormGroup|any;
-  
-  constructor(private router:Router,private http:HttpClient) { }
+  public loginForm: FormGroup | any;
 
-  // create(user: any):Observable<Users>{
-  //   return this.http.post<user>(this.url+'/'+JSON.stringify(user))
-  // }
+  constructor(private router: Router, private http: HttpClient) { }
 
-  login(name:string,password:string):Observable<boolean>{
-    
-    // if(name === 'admin' && password === 'Admin@123'){
-    //   this.loggedIn=true;
-    //   return of(true);
-    // }
-    
-
-
-    // else{
-    //   this.http.get<any>("http://localhost:3000/details")
-    //   .subscribe(res=>{
-    //     const user=res.find((data:any)=>{
-    //       return data.name === this.loginForm.value.name && data.password === this.loginForm.value.password
-    //     });
-    //     if(user){
-    //       alert("login success");
-    //       this.loginForm.reset();
-    //       this.router.navigate(['dashboard'])
-    //     }
-    //     else{
-    //       alert("user not found");
-    //     }
-    //   },err=>{
-    //     alert("Something Went Wrong");
-    //   })
-    // }
-
+  login(name: string, password: string): Observable<boolean> {
 
     return of(false);
   }
