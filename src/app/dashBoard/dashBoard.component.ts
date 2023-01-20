@@ -35,10 +35,7 @@ export class DashBoardComponent implements OnInit {
     localStorage.removeItem('password')
     localStorage.removeItem('username')
     localStorage.clear();
-    this.mug=[];
     this.router.navigate(['/home']);
-  }
-  toggle(){
-    
+    // this.userservice.logout();
   }
 }

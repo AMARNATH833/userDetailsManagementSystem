@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Users } from './user';
 import { catchError, map, Observable } from 'rxjs';
 import { UserFetch } from './userFetch';
+import { Route, Router } from '@angular/router';
 
 
 @Injectable({
@@ -23,7 +24,7 @@ export class UserService {
   headers: this.headers
   }
  
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private router:Router) { }
   getDetails(){
     return this.http.get<Users[]>(this.url);
   }
@@ -43,7 +44,14 @@ export class UserService {
     return this.http.get<Users[]>(this.Userurl);
   }
   create(data:any){
-    return this.http.post(this.url,data) 
+    return this.http.post(`${this.url}`,data) 
   }
+  // logout(){
+  //   this.loggedIn=false;
+  //   localStorage.removeItem('password')
+  //   localStorage.removeItem('username')
+  //   localStorage.clear();
+  //   this.router.navigate(['/home']);
+  // }
   
 }

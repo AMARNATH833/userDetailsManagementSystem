@@ -23,10 +23,10 @@ export class CreateComponent implements OnInit {
   ngOnInit(){
 
   }
-  createUser(){
-    this.userservice.create(this.value).subscribe(data=>{this.response=data});
+  createUser(create:NgForm){
+    this.userservice.create(create.value).subscribe(data=>{this.response=data});
+    console.log(create.value)
     console.log("Creation successfull")
-    
     this.router.navigate(['/admin']); 
   }
 }
