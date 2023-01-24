@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { CreateComponent } from './create.component';
 import { HttpClient, HttpHandler } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 describe('CreateComponent', () => {
   let component: CreateComponent;
@@ -13,7 +14,7 @@ describe('CreateComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [CreateComponent],
-      providers: [HttpClient, HttpHandler]
+      providers: [HttpClient, HttpHandler,FormsModule]
     })
       .compileComponents();
   }));

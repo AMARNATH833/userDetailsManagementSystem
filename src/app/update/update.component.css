@@ -19,7 +19,6 @@ input {
 }
 
 button {
-    /* background-color:rgb(rgb(195, 44, 44), green, blue); */
     background-color: green;
     color: white;
     padding: 15px;

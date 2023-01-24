@@ -14,9 +14,6 @@ import { AuthService } from '../auth.service'
 export class AdminComponent implements OnInit {
   title = "admin";
   users: Users[] = [];
-  p: number = 1;
-
-  // public linkURL="http://localhost:3000/details";
 
   constructor(private userservice: UserService, private http: HttpClient, private router: Router, private auth: AuthService) { }
 

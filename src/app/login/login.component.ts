@@ -13,9 +13,6 @@ import { UserService } from '../user.service';
 })
 export class LoginComponent implements OnInit {
   [x: string]: any;
-  isSubmitted: boolean = false;
-  isValidUser: boolean = false;
-  session: any;
 
   public loginForm: FormGroup | any;
 
