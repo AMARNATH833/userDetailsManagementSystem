@@ -28,4 +28,17 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('form invalid when empty',()=>{
+    expect(component.loginForm.valid).toBeFalsy();
+  });
+
+  it('form invalid when password is empty',()=>{
+    expect(component.loginForm.password).toBeFalsy();
+  });
+  
+  it('form invalid when name is empty',()=>{
+    expect(component.loginForm.name).toBeFalsy();
+  });
+
 });

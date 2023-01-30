@@ -43,4 +43,12 @@ export class AdminComponent implements OnInit {
   create() {
     this.router.navigate(['/create']);
   }
+
+  p:any;
+  data:any=[];
+  getData(){
+    this.userservice.getDetails().subscribe((data)=>{
+      this.data=data;
+    });
+  }
 }

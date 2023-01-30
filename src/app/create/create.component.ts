@@ -29,4 +29,5 @@ export class CreateComponent implements OnInit {
     console.log("Creation successfull");
     this.router.navigate(['/admin']);
   }
+  
 }

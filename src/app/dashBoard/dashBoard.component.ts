@@ -24,8 +24,13 @@ export class DashBoardComponent implements OnInit {
   constructor(private auth: AuthService, private router: Router, private userservice: UserService) { }
 
   ngOnInit() {
-    this.userservice.getUserDetails().subscribe(response => { this.mug = response })
+   const hello= this.userservice.getUserDetails().subscribe(response => {this.mug = response})
   }
+
+  // getUsers() {
+  //   this.userservice.getDetails().subscribe((response) => { this.mug = response; })
+  // }
+
   update(id: Number) {
     this.router.navigate(['/update', id])
   }

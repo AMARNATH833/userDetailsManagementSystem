@@ -11,7 +11,8 @@
     <label>Role:</label><br>
     <input type="text" [(ngModel)]="user.role"><br>
     <label>Image:</label><br>
-    <input type="text" [(ngModel)]="user.image"><br><br>
+    <!-- <input type="file" [(ngModel)]="user.image"><br><br> -->
+    <input type="file" (change)="onselectFile($event)">
     <button type="submit" (click)="update()">Submit</button>
   </div>
 </div>
