@@ -1,9 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Users } from '../user';
 import { UserService } from '../user.service';
-import { AuthService } from '../auth.service'
+import { AuthService } from '../auth.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-admin',
@@ -44,11 +47,4 @@ export class AdminComponent implements OnInit {
     this.router.navigate(['/create']);
   }
 
-  p:any;
-  data:any=[];
-  getData(){
-    this.userservice.getDetails().subscribe((data)=>{
-      this.data=data;
-    });
-  }
 }

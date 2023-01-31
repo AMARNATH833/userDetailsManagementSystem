@@ -40,13 +40,6 @@
         </tr>
       </tbody>
     </table>
-  </mat-sidenav-content>
+    
+   </mat-sidenav-content>
 </mat-sidenav-container>
-<div *ngFor="let d of data | paginate:{itemsPerPage:2,currentPage:10}">
-  <p>"userId"={{d.id}}</p>
-  <p>"name"={{d.name}}</p>
-  <p>"password"={{d.password}}</p>
-  <p>"role"={{d.role}}</p>
-  <p>"image"={{d.image}}</p>
-</div>
-<pagination-controls (pageChange)="p= $event" class="float-right"></pagination-controls>

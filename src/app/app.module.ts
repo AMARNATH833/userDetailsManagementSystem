@@ -23,6 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { NgxPaginationModule } from 'ngx-pagination';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CreateComponent
   ],
   imports: [
+    MatTableModule,
+    MatPaginatorModule,
     NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
