@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'about', title: 'About', component: AboutComponent, canActivate: [AuthGuard] },
   { path: 'dashboard', title: 'DashBoard', component: DashBoardComponent, canActivate: [AuthGuard] },
   { path: 'admin', title: 'AdminPage', component: AdminComponent},
-  { path: 'update/:id', title: 'UPDATE', component: UpdateComponent, canActivate: [AuthGuard] },
+  { path: 'update/:id', title: 'UPDATE', component: UpdateComponent },
   { path: 'create', title: 'CREATE', component: CreateComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', title: 'PAGENOTFOUND', component: ErrorPageComponent }

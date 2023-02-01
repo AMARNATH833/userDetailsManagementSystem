@@ -4,22 +4,26 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { Users } from '../user';
-import { FormsModule } from '@angular/forms';
 import { UserFetch } from '../userFetch';
 
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
+  
 })
+
+
+
 export class CreateComponent implements OnInit {
 
   users: Users[] = [];
   user!: UserFetch;
   response: any;
   value: any;
+  selectedFile!: File;
 
-  constructor(private userservice: UserService, private router: Router) { }
+  constructor(private http:HttpClient,private userservice: UserService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -29,5 +33,18 @@ export class CreateComponent implements OnInit {
     console.log("Creation successfull");
     this.router.navigate(['/admin']);
   }
+  
+  // onselectFile(event: any){
+  //   this.selectedFile=<File>event.target.files[0];
+  // }
+
+  // onUpload(){
+  //   const file=new FormData();
+  //   file.append('image',this.selectedFile,this.selectedFile.name)
+  //   this.http.post('http://localhost:3000/details',file).subscribe(res=>{
+  //     console.log(res);
+  //   })
+  // }
+
   
 }

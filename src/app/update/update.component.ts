@@ -1,3 +1,5 @@
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Users } from '../user';
@@ -13,11 +15,20 @@ export class UpdateComponent implements OnInit {
 
   member: any;
   url="./assets/home.png";
+  image: string | ArrayBuffer |any;
+  
 
-  constructor(public route: ActivatedRoute, public router: Router, public userservice: UserService) { }
+  constructor(private http:HttpClient, public route: ActivatedRoute, public router: Router, public userservice: UserService) { }
   value: any;
   users: Users[] = [];
   user!: UserFetch;
+  
+  public selectedFile: any;
+  public event1:any;
+  imgURL:any;
+  receivedImageData:any;
+  base64Data:any;
+  convertedImage:any;
 
   ngOnInit() {
     let sub = this.route.params.subscribe(paras => {
@@ -34,15 +45,31 @@ export class UpdateComponent implements OnInit {
   getUsers() {
     this.userservice.getDetails().subscribe((response) => { this.users = response; })
   }
-  
-  onselectFile(e:any){
-    if(e.target.files){
-      var reader=new FileReader();
-      reader.readAsDataURL(e.target.files[0]);
-      reader.onload=(event:any)=>{
-        this.url=event.target.res
-      }
-    }
+
+  public onFileChanged(event:any){
+    console.log(event);
+    this.selectedFile=event.target.files[0];
+
+    let reader=new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onload=(event2)=>{
+      this.imgURL=reader.result;
+    };
+  }
+
+  onUpload(){
+    const uploadData=new FormData();
+    uploadData.append('myFile',this.selectedFile,this.selectedFile.name);
+
+
+    this.http.post('http://localhost:3000/details',uploadData)
+      .subscribe(
+        res=>{console.log(res);
+              this.receivedImageData=res;
+              this.base64Data=this.receivedImageData.pic;
+              this.convertedImage='data"image/jpeg;base64,'+this.base64Data;},
+        err=>console.log('Error occured during Upload: '+err)
+      );
   }
 
 }

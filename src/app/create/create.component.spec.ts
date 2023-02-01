@@ -14,7 +14,8 @@ describe('CreateComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [CreateComponent],
-      providers: [HttpClient, HttpHandler,FormsModule]
+      providers: [HttpClient, HttpHandler,FormsModule],
+      imports:[FormsModule]
     })
       .compileComponents();
   }));
