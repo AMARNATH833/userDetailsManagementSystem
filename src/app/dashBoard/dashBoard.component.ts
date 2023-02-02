@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { Users } from '../user';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { UserService } from '../user.service';
-import { name } from '../verify.validation';
 
 @Component({
   selector: 'app-dashBoard',
@@ -20,12 +18,10 @@ export class DashBoardComponent implements OnInit {
   nameValue = localStorage.getItem('name');
   passwordValue = localStorage.getItem('password');
 
-  constructor(private auth: AuthService, private router: Router, private userservice: UserService) { }
+  constructor(private router: Router, private userservice: UserService) { }
 
   ngOnInit() {
    const hello= this.userservice.getUserDetails().subscribe(response => {this.mug = response})
-   console.log(this.nameValue)
-   console.log(this.passwordValue)
   }
 
   // getUsers() {
@@ -41,8 +37,6 @@ export class DashBoardComponent implements OnInit {
     localStorage.removeItem('password')
     localStorage.removeItem('username')
     localStorage.clear();
-    this.nameValue=null;
-    this.passwordValue=null;
     this.router.navigate(['/home']);
   }
 }
