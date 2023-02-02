@@ -74,8 +74,15 @@
       "id": 11,
       "name": "SureshKumar",
       "password": "Suresh@Aspire123",
-      "role": "Manager",
-      "image": "https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2F83afb31c-38fc-11e9-9988-28303f70fcff?fit=scale-down&source=next&width=700"
+      "role": "Developer",
+      "image": "C:\\fakepath\\MicrosoftTeams-image (2).png"
+    },
+    {
+      "id": 12,
+      "name": "SanthoshKumar",
+      "password": "Santhosh@Aspire1223",
+      "role": "Developer",
+      "image": "C:\\fakepath\\MicrosoftTeams-image (1).png"
     }
   ],
   "admin": [

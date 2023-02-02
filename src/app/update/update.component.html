@@ -15,17 +15,13 @@
     <!-- <input type="file" [(ngModel)]="user.image"><br><br> -->
 
     <div>
-      <input type="file" (change)="onFileChanged($event)">
-      <img [src]="imgURL" height="100" *ngIf="imgURL">
+      <input type="file" [(ngModel)]="user.image" (change)="onFileChanged($event)">
+      <img [src]="imgURL" alt="Image upload is in progress" height="100" *ngIf="imgURL" >
     </div>
 
     <input type="button" (click)="onUpload()" value="upload">
 
-
-    <!-- <input type="file" (change)="onselectFile($event)">
-    <button type="button" (click)="onUpload()">UPLOAD</button> -->
-
-    
     <button type="submit" (click)="update()">Submit</button>
   </div>
+  
 </div>

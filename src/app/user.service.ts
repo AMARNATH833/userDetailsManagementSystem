@@ -36,7 +36,7 @@ export class UserService {
     const url = `${this.url}/${id}`;
     return this.http.get<Users>(url, this.httpOptions);
   }
-  UpdateUser(user: UserFetch): Observable<Users> {
+  UpdateUser(user: UserFetch,id:Number): Observable<Users> {
     const url = `${this.url}/${user.id}`;
     return this.http.put<Users>(url, user, this.httpOptions).pipe(map(() => user))
   }

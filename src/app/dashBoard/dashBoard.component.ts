@@ -15,7 +15,6 @@ import { name } from '../verify.validation';
 export class DashBoardComponent implements OnInit {
 
   mug: Users[] = [];
-  count: any;
   showFiller = false;
 
   nameValue = localStorage.getItem('name');
@@ -25,6 +24,8 @@ export class DashBoardComponent implements OnInit {
 
   ngOnInit() {
    const hello= this.userservice.getUserDetails().subscribe(response => {this.mug = response})
+   console.log(this.nameValue)
+   console.log(this.passwordValue)
   }
 
   // getUsers() {
@@ -40,6 +41,8 @@ export class DashBoardComponent implements OnInit {
     localStorage.removeItem('password')
     localStorage.removeItem('username')
     localStorage.clear();
+    this.nameValue=null;
+    this.passwordValue=null;
     this.router.navigate(['/home']);
   }
 }

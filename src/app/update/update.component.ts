@@ -37,7 +37,7 @@ export class UpdateComponent implements OnInit {
     this.userservice.getUpdateUser(this.value).subscribe(data => { this.user = data })
   }
   update() {
-    this.userservice.UpdateUser(this.user).subscribe(data => { });
+    this.userservice.UpdateUser(this.user,this.user.id).subscribe(data => { });
     this.getUsers();
     this.userservice.loggedIn = false;
     this.router.navigate(['/login']);
@@ -45,6 +45,8 @@ export class UpdateComponent implements OnInit {
   getUsers() {
     this.userservice.getDetails().subscribe((response) => { this.users = response; })
   }
+
+
 
   public onFileChanged(event:any){
     console.log(event);
@@ -62,7 +64,7 @@ export class UpdateComponent implements OnInit {
     uploadData.append('myFile',this.selectedFile,this.selectedFile.name);
 
 
-    this.http.post('http://localhost:3000/details',uploadData)
+    this.http.post('http://localhost:3000/details/id',uploadData)
       .subscribe(
         res=>{console.log(res);
               this.receivedImageData=res;
