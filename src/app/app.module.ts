@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { ErrorPageComponent } from './errorPage/errorPage.component';
 import { HomeComponent } from './home/home.component';
@@ -25,6 +25,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgxPaginationModule } from 'ngx-pagination';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { Token } from '@angular/compiler';
 
 
 @NgModule({
@@ -58,7 +59,12 @@ import { MatTableModule } from '@angular/material/table';
     MatButtonModule
 
   ],
-  providers: [UserService, HttpClient],
+  providers: [UserService, HttpClient,
+  {
+    provide:HTTP_INTERCEPTORS,
+    useClass:UserService,
+    multi:true
+  }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

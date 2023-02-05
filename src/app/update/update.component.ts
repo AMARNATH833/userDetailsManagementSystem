@@ -46,8 +46,6 @@ export class UpdateComponent implements OnInit {
     this.userservice.getDetails().subscribe((response) => { this.users = response; })
   }
 
-
-
   public onFileChanged(event:any){
     console.log(event);
     this.selectedFile=event.target.files[0];

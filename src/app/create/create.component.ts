@@ -13,8 +13,6 @@ import { UserFetch } from '../userFetch';
   
 })
 
-
-
 export class CreateComponent implements OnInit {
 
   users: Users[] = [];

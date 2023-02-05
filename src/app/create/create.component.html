@@ -1,10 +1,7 @@
 <button mat-button routerLink="/admin">Admin</button>
 <form #create="ngForm" (ngSubmit)="createUser(create)">
+  <h1>New Employee Details</h1>
   <div>
-    <label>ID:</label>
-    <pre></pre>
-    <input type="number" ngModel placeholder="Enter the ID of the User" required name="id">
-    <pre></pre>
 
     <label>NAME:</label>
     <pre></pre>
@@ -21,12 +18,12 @@
     <input type="text" ngModel placeholder="Enter the ROLE for the User" required name="role">
     <pre></pre>
 
-    <label>IMAGE:</label>
+    <!-- <label>IMAGE:</label>
     <pre></pre>
     <input type="text" ngModel placeholder="Enter the URl of the IMAGE" required name="image">
     <!-- <input type="file" (change)="onselectFile($event)">
     <button type="button" (click)="onUpload()">UPLOAD</button> -->
-    <pre></pre>
+    <!-- <pre></pre> --> 
 
     <button type="submit">SUBMIT</button>
   </div>

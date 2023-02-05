@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders,HttpInterceptor } from '@angular/common/http';
 import { Users } from './user';
 import { catchError, map, Observable } from 'rxjs';
 import { UserFetch } from './userFetch';
@@ -45,5 +45,14 @@ export class UserService {
   }
   create(data: any) {
     return this.http.post(`${this.url}`, data)
+  }
+
+  intercept(req:any,next:any){
+    let tokenizedRequest=req.clone({
+      setHeaders:{
+        Authorization:'Amarsplash'
+      }
+    })
+    return next.handle(tokenizedRequest)
   }
 }
