@@ -11,8 +11,6 @@
     <label>Role:</label><br>
     <input type="text" [(ngModel)]="user.role"><br>
     <label>Image:</label><br>
-    
-    <!-- <input type="file" [(ngModel)]="user.image"><br><br> -->
 
     <div>
       <input type="file" [(ngModel)]="user.image" (change)="onFileChanged($event)">
