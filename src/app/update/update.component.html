@@ -14,7 +14,7 @@
 
     <div>
       <input type="file" [(ngModel)]="user.image" (change)="onFileChanged($event)">
-      <img [src]="imgURL" alt="Image upload is in progress" height="100" *ngIf="imgURL" >
+      <img [src]="imgURL" height="100" *ngIf="imgURL" >
     </div>
 
     <input type="button" (click)="onUpload()" value="upload">
